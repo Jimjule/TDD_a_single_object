@@ -1,6 +1,10 @@
 require 'dice_roller.rb'
 
 describe Dice do
+  dice = Dice.new
+  it "rolling the dice equals 6" do
+    expect(dice.roll).to eq 6
+  end
 end
 
 

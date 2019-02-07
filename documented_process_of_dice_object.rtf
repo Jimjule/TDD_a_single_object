@@ -17,15 +17,21 @@ For the purpose of TDD (Red, Green, Refactor), I will construct an RSpec test th
 \
 Dice class - My single object, which will contain all of the necessary methods to fulfil my objectives.\
 Array of the numbers 1-6, passed to the roll_dice method.\
-roll_dice method - Runs #sample on the array to randomly roll the dice, and stores the result as an array. May require use of the #times method to roll the necessary number of dice.\
+roll method - Runs #sample on the array to randomly roll the dice, and stores the result as an array. May require use of the #times method to roll the necessary number of dice.\
 result method - Returns the array of the value of the dice rolls\
 \
 # Process\
 \
+BUILD A SINGLE DICE OBJECT\
+\
 R - Described Dice class in RSpec, failed (NameError: uninitialised constant Dice)\
 G - Initialised Dice class, passed\
-R - \
+R - None\
 \
-R - \
-G - \
+COMPLETED\
+THIS OBJECT SHOULD ROLL A DIE\
+\
+R - Expected dice.roll == 6, fail (NoMethodError: undefined method \'91roll\'92 for Dice:Class)\
+R - Defined roll method, fail (expected: 6 got: nil)\
+G - Gave roll method a value of 6, passed\
 R - }
