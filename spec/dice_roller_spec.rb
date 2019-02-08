@@ -11,9 +11,21 @@ describe Dice do
     dice.roll(6)
   end
 
+  let(:subject) { described_class.new }
+  dice = Dice.new
+  dice.roll
+  it "uses the #rand method" do
+     expect(subject).to receive(:rand).and_return(1)
+     expect(subject.roll).to eq 1
+  end
+
   dice = Dice.new
   it "outputs a number" do
     expect(dice.roll).to be_an(Integer)
+  end
+  dice = Dice.new
+  it "responds to #roll" do
+    expect(dice).to respond_to(:roll)
   end
 end
 

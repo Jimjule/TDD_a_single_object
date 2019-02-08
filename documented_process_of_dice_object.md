@@ -39,9 +39,26 @@ G - Changed output to an array between 1 and 6 and called #sample, passed
 Rf - Replaced array and #sample with rand(6) + 1, passed
 
 COMPLETED
+RESULT SHOULD BE RANDOMLY PICKED
+
+R - Expected result to be random, failed
+G - Expected to use #rand, passed
+
+COMPLETED
 ROLL ANY NUMBER OF DICE
 
 R - Described a dice instance being passed dice.roll(6), failed (ArgumentError wrong number of arguments (given 1, expected 0))
 G - Gave #roll argument quantity = 1, passed
+
+COMPLETED
+RESULT SHOULD BE SHOWN
+
+G - Expected dice.roll to be an integer, passed
+
+COMPLETED
+SHOULD RESPOND TO #ROLL
+
+R - Expected dice to respond to #not_a_method, failed
+G - Expected dice to respond to #roll, passed
 
 COMPLETED
