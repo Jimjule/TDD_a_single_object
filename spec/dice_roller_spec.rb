@@ -3,7 +3,7 @@ require 'dice_roller.rb'
 describe Dice do
   it "dice output between 1 and 6" do
     dice = Dice.new
-    expect(dice.roll).to be_between(1, 6)
+    expect(dice.roll[0]).to be_between(1, 6)
   end
 
   it "can roll any number of dice" do
@@ -14,13 +14,13 @@ describe Dice do
   it "uses the #rand method" do
     dice = Dice.new
     dice.roll
-    expect(subject).to receive(:rand).and_return(1)
-    expect(subject.roll).to eq 1
+    expect(subject).to receive(:rand).and_return(0)
+    expect(subject.roll[0]).to eq 1
   end
 
   it "outputs a number" do
     dice = Dice.new
-    expect(dice.roll).to be_an(Integer)
+    expect(dice.roll[0]).to be_an(Integer)
   end
 
   it "responds to #roll" do

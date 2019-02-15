@@ -62,3 +62,5 @@ R - Expected dice to respond to #not_a_method, failed
 G - Expected dice to respond to #roll, passed
 
 COMPLETED
+
+Rf - Replaced puts with return to make program more irb appropriate. Created a result array in which to store all dice rolls so that they can be returned together. Refactored tests to account for an array, all tests pass.
